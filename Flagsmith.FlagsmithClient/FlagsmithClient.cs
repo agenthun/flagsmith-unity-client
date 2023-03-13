@@ -213,7 +213,7 @@ namespace Flagsmith
 
                 if (traits != null && traits.Count > 0)
                 {
-                    jsonBody = JsonConvert.SerializeObject(new { identifier = identity, traits = traits ?? new List<Trait>() });
+                    jsonBody = JsonConvert.SerializeObject(new IdentityFlagsJsonBody(identifier: identity, traits: traits ?? new List<Trait>()));
                     jsonResponse = await GetJSON(HttpMethod.Post, url, body: jsonBody);
                 }
                 else

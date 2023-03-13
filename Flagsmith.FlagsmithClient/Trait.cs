@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace Flagsmith
 {
-    [JsonObject(MemberSerialization.OptIn)]
+    [System.Serializable]
     public class Trait : ITrait
     {
         public Trait() { }
